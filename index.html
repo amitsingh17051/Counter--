@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Counter(+-)</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <style>
+        .container {
+  text-align:center;
+ 
+  
+}
+
+
+h1 {
+  font-size:200px;
+  margin:0;
+  padding:0;
+}
+#counter {
+  
+  background-color:lightblue;
+}
+    </style>
+</head>
+<body>
+<div class="container">
+  <div class="row">
+  
+    <div class="col-sm-6 offset-sm-3 mt-sm-5">
+         <h1 id="counter">1</h1>
+         <button id="plus" onclick="onClick()" class="btn btn-primary mt-5 p-4"> 
+            <span class="glyphicon glyphicon-plus
+" aria-hidden="true"></span>
+         </button>
+         <button id="less" onclick="lesClick()" class="btn btn-danger mt-5 p-4">
+            <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+         </button>
+    </div>
+  </div>
+</div>
+
+<script >
+
+    
+var clicks = 0;
+    function onClick() {
+        clicks += 1;
+        document.getElementById("counter").innerHTML = clicks;
+    };
+
+function lesClick() {
+        clicks -= 1;
+        document.getElementById("counter").innerHTML = clicks;
+    };
+</script>
+</body>
+</html>
